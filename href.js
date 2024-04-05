@@ -1,17 +1,19 @@
+// RUN EXTENSION WITH SANDBOX please 
+
 class StrictEqualityExtension {
   getInfo() {
     return {
       id: 'href', // change this if you make an actual extension!
-      name: 'Strict Equality',
+      name: 'Href extension',
       blocks: [
         {
-          opcode: 'strictlyEquals',
-          blockType: Scratch.BlockType.BOOLEAN,
+          opcode: 'relocate',
+          blockType: Scratch.BlockType.COMMAND,
           text: 'relocate site to [ONE]',
           arguments: {
             ONE: {
               type: Scratch.ArgumentType.STRING,
-              defaultValue: 'First value'
+              defaultValue: 'https://turbowarp.org'
             }
           }
         }
